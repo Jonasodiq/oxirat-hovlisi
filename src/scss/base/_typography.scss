@@ -41,12 +41,12 @@ p {
 }
 
 a {
-    color: #009999;
+    color: var(--color-blue);
     text-decoration: none;
     font-weight: 700;
     line-height: var(--line-height);
     &:hover {
-        color: #ff7300c0;
+        color: var(--color-light-200);
     }
 }
 
