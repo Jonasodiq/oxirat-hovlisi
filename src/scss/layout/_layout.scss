@@ -1,1 +1,8 @@
+.header, .hero {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
 
+.header__inner, .hero__inner {
+    grid-column: inner;
+}
