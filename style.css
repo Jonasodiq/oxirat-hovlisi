@@ -6,15 +6,16 @@
   --gap-m: 2rem;
   --gap-s: 1rem;
   --border-radius: 0px;
-  --color-dark: #222;
-  --color-dark-200: #444;
-  --color-dark-300: #666;
-  --color-dark-500: #888;
-  --color-dark-600: #999;
-  --color-dark-700: #b5b5b5;
-  --color-dark-800: #d5d5d5;
-  --color-dark-900: #f1f1f1;
-  --color-accent: #009fbb;
+  --color-dark: hsl(0, 0%, 7%);
+  --color-dark-200: hsl(0, 0%, 17%);
+  --color-dark-300: hsl(0, 0%, 27%);
+  --color-dark-500: hsl(0, 0%, 37%);
+  --color-dark-600: hsl(0, 0%, 47%);
+  --color-dark-700: hsl(0, 0%, 57%);
+  --color-dark-800: hsl(0, 0%, 67%);
+  --color-dark-900: hsl(0, 0%, 77%);
+  --color-accent: #c66300;
+  --color-blue: #009999;
   --color-accent-200: #009fbb;
   --color-accent-300: #009fbb;
   --color-accent-400: #009fbb;
@@ -23,15 +24,15 @@
   --color-accent-700: #009fbb;
   --color-accent-800: #009fbb;
   --color-accent-900: #009fbb;
-  --color-light: #efead8;
-  --color-light-200: #efead8;
-  --color-light-300: #efead8;
-  --color-light-400: #efead8;
-  --color-light-500: #efead8;
-  --color-light-600: #efead8;
-  --color-light-700: #efead8;
-  --color-light-800: #efead8;
-  --color-light-900: #efead8;
+  --color-light: hsl(0, 0%, 100%);
+  --color-light-200: hsl(0, 0%, 90%);
+  --color-light-300: hsl(0, 0%, 80%);
+  --color-light-400: hsl(0, 0%, 70%);
+  --color-light-500: hsl(0, 0%, 60%);
+  --color-light-600: hsl(0, 0%, 50%);
+  --color-light-700: hsl(0, 0%, 40%);
+  --color-light-800: hsl(0, 0%, 30%);
+  --color-light-900: hsl(0, 0%, 20%);
   --font-sans: "Arial", sans-serif;
   --font-serif: "Georgia", serif;
   --line-height: 1.5;
@@ -43,6 +44,8 @@
   --font-size-4: calc(var(--font-size-3) * var(--font-scale));
   --font-size-5: calc(var(--font-size-4) * var(--font-scale));
   --font-size-6: calc(var(--font-size-5) * var(--font-scale));
+  --page-width: 72rem;
+  --grid-container: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(32px, 1fr) [full-end];
 }
 
 * {
@@ -64,43 +67,200 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+  color: #009999;
+}
+
+h1 {
+  font-size: var(--font-size-6);
+}
+
+h2 {
+  font-size: var(--font-size-5);
+}
+
+h3 {
+  font-size: var(--font-size-4);
+}
+
+h4 {
+  font-size: var(--font-size-3);
+}
+
+h5 {
+  font-size: var(--font-size-2);
+}
+
+h6 {
+  font-size: var(--font-size-1);
 }
 
 p {
-  line-height: var(--line-heigt);
+  line-height: var(--line-height);
+}
+
+p {
+  line-height: var(--line-height);
 }
 
 a {
-  color: var(--color-dark);
+  color: #009999;
   text-decoration: none;
-  line-height: var(--line-heigt);
+  font-weight: 700;
+  line-height: var(--line-height);
 }
 a:hover {
-  color: var(--color-accent);
+  color: rgba(255, 115, 0, 0.7529411765);
 }
 
 li {
-  line-height: var(--line-heigt);
+  line-height: var(--line-height);
 }
 
-.test {
-  background-color: blue;
-  color: var(--color-light);
-  padding: 1rem 2rem;
-  border: 0;
-  border-radius: 2rem;
+.header, .hero {
+  display: grid;
+  grid-template-columns: var(--grid-container);
+}
+
+.header__inner, .hero__inner {
+  grid-column: inner;
+}
+
+/* 
+@use: link:https://sass-lang.com/documentation/at-rules/use/
+
+@mixin & @include link:https://sass-lang.com/documentation/at-rules/mixin/
+                    https://www.w3schools.com/sass/sass_import.php
+
+    ex: @use '../components/buttons';
+        @include buttons.default;
+*/
+.header {
+  background: rgba(119, 119, 119, 0.3137254902);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  z-index: 999;
+  height: 100px;
+  width: 100%;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.header__srch {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin-top: 30px;
+}
+.header__srch--btn {
+  width: 40px;
+  height: 40px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #009999;
+  background-color: transparent;
+  pointer-events: painted;
+}
+.header__srch--btn:focus ~ .header__input--srch {
+  width: 200px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid #777;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.header__input--srch {
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  padding: 10px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 30px;
+  transition: all 0.5s ease-in-out;
+  background-color: #666666;
+  padding-right: 20px;
+  color: #ccc;
+}
+.header__input--srch::placeholder {
+  color: #777777;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.header__input--srch:focus {
+  width: 200px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid #777;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.header__content {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.header__button {
+  margin-left: 20px;
+  background-color: var(--color-blue);
+  color: var(--color-dark);
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--color-blue);
+  border-radius: 10px;
   font-size: 1rem;
   font-weight: 700;
   display: inline-block;
   text-decoration: none;
 }
-.test:hover {
+.header__button:hover {
   background-color: var(--color-accent);
   color: var(--color-light);
+  border: 1px solid var(--color-light);
+  cursor: pointer;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-l);
 }
 
 .hero {
-  background-color: black;
+  min-height: 100vh;
+  background: url(assets/images/bg.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.hero__inner {
+  display: flex;
+  align-items: center;
+}
+.hero__content {
+  background: rgba(100, 100, 100, 0.223);
+  max-width: 600px;
+  max-height: 400px;
+}
+.hero__title {
+  font-size: clamp(3.25rem, -4.75rem + 20vw, 5.25rem);
+  margin: 24px;
+  text-align: center;
+}
+.hero__title span {
+  color: #c66300;
+}
+.hero__dscr {
+  font-size: clamp(0.8rem, 2.9vw, 1.5rem);
+  margin: 0 24px 24px;
+  text-align: end;
 }
 
 /*# sourceMappingURL=style.css.map */
