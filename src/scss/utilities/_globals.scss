@@ -18,7 +18,8 @@
     --color-dark-800: hsl(0, 0%, 67%);
     --color-dark-900: hsl(0, 0%, 77%);
 
-    --color-accent: #009fbb;
+    --color-accent: #c66300;
+    --color-blue: #009999;
     --color-accent-200: #009fbb;
     --color-accent-300: #009fbb;
     --color-accent-400: #009fbb;
@@ -54,4 +55,7 @@
     --font-size-5: calc(var(--font-size-4) * var(--font-scale)); // 2.4
     --font-size-6: calc(var(--font-size-5) * var(--font-scale)); // 3
     
+
+    --page-width: 72rem;
+    --grid-container: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(32px, 1fr) [full-end];
 }
