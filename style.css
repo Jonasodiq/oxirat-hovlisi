@@ -16,6 +16,7 @@
   --color-dark-900: hsl(0, 0%, 77%);
   --color-accent: #c66300;
   --color-blue: #009999;
+  --color-bisque: bisque;
   --color-accent-200: #009fbb;
   --color-accent-300: #009fbb;
   --color-accent-400: #009fbb;
@@ -55,6 +56,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--color-bisque);
 }
 
 img {
@@ -103,25 +105,25 @@ p {
 }
 
 a {
-  color: #009999;
+  color: var(--color-blue);
   text-decoration: none;
   font-weight: 700;
   line-height: var(--line-height);
 }
 a:hover {
-  color: rgba(255, 115, 0, 0.7529411765);
+  color: var(--color-light-200);
 }
 
 li {
   line-height: var(--line-height);
 }
 
-.header, .hero {
+.header, .hero, .course {
   display: grid;
   grid-template-columns: var(--grid-container);
 }
 
-.header__inner, .hero__inner {
+.header__inner, .hero__inner, .course__inner {
   grid-column: inner;
 }
 
@@ -210,7 +212,7 @@ li {
   margin-left: 20px;
   background-color: var(--color-blue);
   color: var(--color-dark);
-  padding: 0.5rem 2rem;
+  padding: 0.4rem 1.5rem;
   border: 1px solid var(--color-blue);
   border-radius: 10px;
   font-size: 1rem;
@@ -220,8 +222,8 @@ li {
 }
 .header__button:hover {
   background-color: var(--color-accent);
-  color: var(--color-light);
-  border: 1px solid var(--color-light);
+  color: var(--color-light-200);
+  border: 1px solid var(--color-accent);
   cursor: pointer;
 }
 
@@ -248,6 +250,7 @@ li {
   background: rgba(100, 100, 100, 0.223);
   max-width: 600px;
   max-height: 400px;
+  border-radius: 32px;
 }
 .hero__title {
   font-size: clamp(3.25rem, -4.75rem + 20vw, 5.25rem);
@@ -261,6 +264,134 @@ li {
   font-size: clamp(0.8rem, 2.9vw, 1.5rem);
   margin: 0 24px 24px;
   text-align: end;
+}
+
+.course {
+  width: 100%;
+  height: 760px;
+}
+.course__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.course__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.course__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-s);
+}
+.course__nav--btn {
+  margin-left: 20px;
+  background-color: var(--color-blue);
+  color: var(--color-dark);
+  padding: 0.4rem 1.5rem;
+  border: 1px solid var(--color-blue);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0.3rem 0.7rem;
+  background-color: var(--color-bisque);
+  font-size: 14px;
+  color: var(--color-blue);
+}
+.course__nav--btn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-light-200);
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+}
+.course__nav--btn:hover {
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+}
+.course__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-m);
+  margin: 20px;
+}
+.course__cards--card {
+  width: 200px;
+  border-radius: 16px;
+  background-color: rgba(221, 221, 221, 0.5176470588);
+  margin: 0;
+  box-shadow: 8px 12px 16px rgba(0, 0, 0, 0.6);
+}
+.course__cards--card h4 {
+  margin: 10px;
+  text-align: center;
+}
+.course__cards--card p {
+  text-align: center;
+  font-size: 12px;
+  margin: 16px;
+}
+.course__cards--card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.course__cards--img {
+  position: relative;
+  border-radius: 16px;
+  aspect-ratio: 1/1;
+  min-width: 200px;
+  margin: 0;
+}
+.course__cards--img::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 1px solid var(--color-light);
+  border-radius: 16px;
+  top: 12px;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  opacity: 0.34;
+}
+.course__cards--btn {
+  margin-left: 20px;
+  background-color: var(--color-blue);
+  color: var(--color-dark);
+  padding: 0.4rem 1.5rem;
+  border: 1px solid var(--color-blue);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0.3rem 0.7rem;
+  background-color: var(--color-bisque);
+  font-size: 14px;
+  color: var(--color-blue);
+}
+.course__cards--btn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-light-200);
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+}
+.course__cards--btn:hover {
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
 }
 
 /*# sourceMappingURL=style.css.map */

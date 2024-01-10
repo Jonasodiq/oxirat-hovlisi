@@ -1,8 +1,8 @@
-.header, .hero {
+.header, .hero, .course {
     display: grid;
     grid-template-columns: var(--grid-container);
 }
 
-.header__inner, .hero__inner {
+.header__inner, .hero__inner, .course__inner {
     grid-column: inner;
 }
