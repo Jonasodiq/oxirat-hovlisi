@@ -1,0 +1,96 @@
+@use '../components/buttons';
+
+.header {
+    background: #77777750;
+    backdrop-filter: blur(4px);
+    position: fixed;
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+   
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__srch {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        margin-top: 30px;
+
+        &--btn {
+            width: 40px;
+            height: 40px;
+            border-style: none;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            right: 0px;
+            color:#009999 ;
+            background-color:transparent;
+            pointer-events: painted; 
+
+            &:focus ~ .header__input--srch {
+                width: 200px;
+                border-radius: 0px;
+                background-color: transparent;
+                border-bottom:1px solid #777;
+                transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+            }
+        }
+    }
+
+    &__input--srch {
+        height: 40px;
+        width: 40px;
+        border-style: none;
+        padding: 10px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        outline: none;
+        border-radius: 30px;
+        transition: all .5s ease-in-out;
+        background-color: #666666;
+        padding-right: 20px;
+        color:#ccc;
+
+        &::placeholder {
+            color:#777777;
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-weight: 100;
+        }
+
+        &:focus {
+            width: 200px;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom:1px solid #777;
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    &__button { 
+        @include buttons.default;
+    }
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+
