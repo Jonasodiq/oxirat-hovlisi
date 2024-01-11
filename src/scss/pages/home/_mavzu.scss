@@ -1,9 +1,10 @@
 @use "../../components/details";
 @use "../../components/buttons";
 
-.course {
+.mavzu {
     width: 100%;
-    height: 600px;
+    min-height: 960px;
+    background-color: var(--color-accent-300);
     
     &__content {
         width: 100%;
@@ -32,7 +33,7 @@
             @include buttons.default;
             margin: 0;
             padding: .3rem .7rem;
-            background-color: var(--color-accent-300);
+            background-color: var(--color-accent-400);
             font-size: 14px;
             color: var(--color-accent-200);
             &:hover {
@@ -44,27 +45,36 @@
 
     &__cards {
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: var(--gap-m);
         margin: 20px;
 
         &--card {
-            width: 200px;
+            width: 390px;
             border-radius: 16px;
             background-color: var(--color-accent-500);
             margin: 0;
             box-shadow: 8px 12px 16px rgb(0 0 0 / 0.6);
+            position: relative;
         
             & h5 {
-                margin: 10px;
-                text-align: center;
-                color: #000;
+                margin: 0;
+                padding: 8px;
+                text-align: start;
+                position: absolute;
+                top: 10.5rem;
+                left: 16px;
+                background: var(--color-accent-300);
+                color:var(--color-dark-200);
+                border-radius: 6px;
+                box-shadow: 4px 4px 6px rgb(0 0 0 / 0.6);
             }
 
             & p {
-                text-align: center;
+                position: relative;
+                text-align: start;
                 font-size: 12px;
                 margin: 16px;
             }
@@ -78,9 +88,9 @@
         }
 
         &--img {
-            @include details.frame;
+            // @include details.frame;
             border-radius: 16px;
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 2 / 1;
             min-width: 200px;
             margin: 0;
         }
@@ -89,7 +99,7 @@
             @include buttons.default;
             margin: 0;
             padding: .3rem .7rem;
-            background-color: var(--color-accent-300);
+            background-color: var(--color-accent-400);
             font-size: 14px;
             color: var(--color-accent-200);
             &:hover {
