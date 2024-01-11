@@ -1,7 +1,7 @@
 @use '../components/buttons';
 
 .header {
-    background: #77777750;
+    background: var(--color-dark-600);
     backdrop-filter: blur(4px);
     position: fixed;
     z-index: 999;
@@ -30,7 +30,7 @@
             border-radius: 50%;
             position: absolute;
             right: 0px;
-            color:#009999 ;
+            color:var(--color-accent-200) ;
             background-color:transparent;
             pointer-events: painted; 
 
@@ -54,7 +54,7 @@
         outline: none;
         border-radius: 30px;
         transition: all .5s ease-in-out;
-        background-color: #666666;
+        background-color: #666;
         padding-right: 20px;
         color:#ccc;
 
