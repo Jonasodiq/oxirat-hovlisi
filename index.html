@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oxirat hovlisi</title>
     <link rel="stylesheet" href="style.css">
+    <script src="src/js/menu.js" defer></script>
     <script src="https://kit.fontawesome.com/1dbb91dc94.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,54 +16,72 @@
         <header class="header">
             <div class="header__inner">
                 <!-- Logo -->
-                <a href="#" class="header__branding">
-                    <img
-                        src="assets/images/logo-black.svg"
-                        alt="triangle with all three sides equal"
-                        height="100"
-                        width="150" 
-                    />
+                <a href="index.html" class="header__branding">
+                    <img src="assets/images/logo-black.svg" alt="triangle with all three sides equal" height="100" width="150"/>
                 </a>
-
+                <!-- Search -->
                 <div class="header__srch">
                     <button class="header__srch--btn">
                       <i class="fas fa-search"></i>  
                     </button>
-                    <input type="text" class="header__input--srch" placeholder="Qidirish">
+                    <input type="text" class="header__srch--input" placeholder="Qidirish">
                 </div>
 
                 <div class="header__content">
 
                     <!-- Menu -->
                     <nav class="menu">
-                        <nav class="menu">
-                            <ul class="menu__list">
-                                <li class="menu__item"><a href="#" class="menu__link">Bosh sahifa</a></li>
-                                <li class="menu__item"><a href="#" class="menu__link">Darslar</a></li>
-                                <li class="menu__item"><a href="#" class="menu__link">Mavzular</a></li>
-                                <li class="menu__item"><a href="#" class="menu__link">Haqimazda</a></li>
-                            </ul>
-                        </nav>
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="#" class="menu__link">Bosh sahifa</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Darslar</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Mavzular</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Haqimazda</a></li>
+                        </ul>
                     </nav>
 
+                    <p class="header__item--buttom">
+                        <a href="#" class="header__link">Kirish</a>
+                    </p>
+
                     <!-- Button -->
-                    <button class="header__button">
-                        <div class="menu__button--hamburger">Kirish</div>
+                    <button class="menu__button">
+                        <div class="menu__button--hamburger"></div>
                     </button>
 
                 </div>
-
             </div>
-
         </header>
+
+        <!-- Site Menu -->
+        <nav class="site-menu">
+            <div class="site-menu__inner">
+            <ul class="site-menu__list">
+                <li class="site-menu__item">
+                <a href="#home" class="site-menu__link">Bosh sahifa</a>
+                </li>
+                <li class="site-menu__item">
+                <a href="#" class="site-menu__link">Darslar</a>
+                </li>
+                <li class="site-menu__item">
+                <a href="#" class="site-menu__link">Mavzular</a>
+                </li>
+                <li class="site-menu__item">
+                <a href="#about" class="site-menu__link">Haqimazda</a>
+                </li>
+            </ul>
+            <div class="site-menu__contact">
+                <p>Copyright &#169; 2024 Oxirat hovlisi</p>
+            </div>
+            </div>
+        </nav>
 
         <!-- Hero -->
         <section id="home" class="hero">
 
             <div class="hero__inner">
                 <div class="hero__content">
-                    <h1 class="hero__title"><span>“</span>Beshikdan<br>qabrgacha<br>ilm izla!<span>”</span></h1>
-                    <h4 class="hero__dscr">Hadis</h4>
+                    <h1 class="hero__content--title"><span>“</span>Beshikdan<br>qabrgacha<br>ilm izla!<span>”</span></h1>
+                    <h4 class="hero__content--dscr">Hadis</h4>
                 </div>
             </div>
 
@@ -73,20 +92,6 @@
 
             <div class="course__inner">
                 <div class="course__content">
-                    <div class="course__header">
-                        <h2>Tanlangan Darslar</h2>
-                        <div class="course__nav">
-                            <button id="all" class="course__nav--btn">Barcha</button>
-                            <button id="aqida" class="course__nav--btn">Aqida</button>
-                            <button id="sirat" class="course__nav--btn">Sirat</button>
-                            <button id="odob" class="course__nav--btn">Odob</button>
-                            <button id="fiqh" class="course__nav--btn">Fiqh</button>
-                            <button id="quran" class="course__nav--btn">Qur'an</button>
-                            <button id="duo" class="course__nav--btn">Duo</button>
-                            <button id="bola" class="course__nav--btn">Bolalar</button>
-                            <button id="ayol" class="course__nav--btn">Ayollar</button>
-                        </div>
-                    </div>
                     <div class="course__cards">
                     
                         <div class="course__cards--card">
@@ -95,7 +100,7 @@
                             </figure>
                             <h5>Aqida</h5>
                             <p>Some text about the jeans. Super slim and comfy</p>
-                            <p><button class="course__cards--btn">More</button></p>
+                            <p><button class="course__cards--btn">Batafsil</button></p>
                         </div>
                         <div class="course__cards--card">
                             <figure  class="course__cards--img">
@@ -103,7 +108,7 @@
                             </figure>
                             <h5>Siyrat</h5>
                             <p>Some text about the jeans. Super slim and comfy.</p>
-                            <p><button class="course__cards--btn">More</button></p>
+                            <p><button class="course__cards--btn">Batafsil</button></p>
                         </div>
                         <div class="course__cards--card">
                             <figure  class="course__cards--img">
@@ -111,7 +116,7 @@
                             </figure>
                             <h5>Odob</h5>
                             <p>Some text about the jeans. Super slim and comfy </p>
-                            <p><button class="course__cards--btn">More</button></p>
+                            <p><button class="course__cards--btn">Batafsil</button></p>
                         </div>
                         <div class="course__cards--card">
                             <figure  class="course__cards--img">
@@ -119,7 +124,7 @@
                             </figure>
                             <h5>Qur'an</h5>
                             <p>Some text about the jeans. Super slim and comfy.</p>
-                            <p><button class="course__cards--btn">More</button></p>
+                            <p><button class="course__cards--btn">Batafsil</button></p>
                         </div>
                         <div class="course__cards--card">
                             <figure  class="course__cards--img">
@@ -127,7 +132,7 @@
                             </figure>
                             <h5>Duo</h5>
                             <p>Some text about the jeans. Super slim and comfy.</p>
-                            <p><button class="course__cards--btn">More</button></p>
+                            <p><button class="course__cards--btn">Batafsil</button></p>
                         </div>
   
                     </div>
@@ -138,7 +143,7 @@
         </section>
         
         <!-- Mavzu -->
-        <section id="mavzu" class="mavzu">
+        <section id="mavzu" class="mavzu  none">
 
             <div class="mavzu__inner">
                 <div class="mavzu__content">
@@ -163,8 +168,8 @@
                                 <img src="https://unsplash.it/800/600?image=8" alt="card">
                             </figure>
                             <h5>Aqida</h5>
-                            <p>Some text about the jeans. Super slim and comfySome text about the jeans. Super slim and comfy. Some text about the jeans. Super slim and comfySome text about the jeans. Super slim and comfy</p>
-                            <p><button class="mavzu__cards--btn">More</button></p>
+                            <p>Some text about the jeans. Super slim and comfySome text about the jeans. Super slim and comfy. Some text about the jeans. Super slim and comfySome text about the jeans. Super slim and comfy. </p>
+                            <p><button class="mavzu__cards--btn">Batafsil</button></p>
                         </div>
                         <div class="mavzu__cards--card">
                             <figure  class="mavzu__cards--img">
@@ -172,15 +177,15 @@
                             </figure>
                             <h5>Siyrat</h5>
                             <p>Some text about the jeans. Super slim and comfy.Some text about the jeans. Super slim and comfy. Some text about the jeans. Super slim and comfySome text about the jeans. Super slim and comfy</p>
-                            <p><button class="mavzu__cards--btn">More</button></p>
+                            <p><button class="mavzu__cards--btn">Batafsil</button></p>
                         </div>
                         <div class="mavzu__cards--card">
                             <figure  class="mavzu__cards--img">
-                                <img src="https://unsplash.it/800/600?image=20" alt="card">
+                                <img src="https://unsplash.it/800/600?image=48" alt="card">
                             </figure>
                             <h5>Odob</h5>
                             <p>Some text about the jeans. Super slim and comfySome text about the jeans. Super slim and comfy. Some text about the jeans. Super slim and comfySome text about the jeans. Super slim and comfy</p>
-                            <p><button class="mavzu__cards--btn">More</button></p>
+                            <p><button class="mavzu__cards--btn">Batafsil</button></p>
                         </div>
                         <div class="mavzu__cards--card">
                             <figure  class="mavzu__cards--img">
@@ -188,7 +193,7 @@
                             </figure>
                             <h5>Qur'an</h5>
                             <p>Some text about the jeans. Super slim and comfy.Some text about the jeans. Super slim and comfy. Some text about the jeans. Super slim and comfySome text about the jeans. Super slim and comfy</p>
-                            <p><button class="mavzu__cards--btn">More</button></p>
+                            <p><button class="mavzu__cards--btn">Batafsil</button></p>
                         </div>
                         <div class="mavzu__cards--card">
                             <figure  class="mavzu__cards--img">
@@ -196,15 +201,15 @@
                             </figure>
                             <h5>Duo</h5>
                             <p>Some text about the jeans. Super slim and comfy.Some text about the jeans. Super slim and comfy. Some text about the jeans. Super slim and comfySome text about the jeans. Super slim and comfy</p>
-                            <p><button class="mavzu__cards--btn">More</button></p>
+                            <p><button class="mavzu__cards--btn">Batafsil</button></p>
                         </div>
                         <div class="mavzu__cards--card">
                             <figure  class="mavzu__cards--img">
-                                <img src="https://unsplash.it/800/600?image=48" alt="card">
+                                <img src="https://unsplash.it/800/600?image=20" alt="card">
                             </figure>
                             <h5>Bolalar</h5>
                             <p>Some text about the jeans. Super slim and comfy.Some text about the jeans. Super slim and comfy. Some text about the jeans. Super slim and comfySome text about the jeans. Super slim and comfy</p>
-                            <p><button class="mavzu__cards--btn">More</button></p>
+                            <p><button class="mavzu__cards--btn">Batafsil</button></p>
                         </div>
   
                     </div>
@@ -213,8 +218,90 @@
             </div>
 
         </section>
-        
 
+        <!-- About -->
+        <section  id="about" class="about  none">
+            <div class="about__inner">
+                <h3 class="about__header">Haqimizda</h3>
+                <div class="about__content">
+
+                    <!-- Manhaj -->
+                    <div class="about__content--card">
+                        <h5 class="about__content--card_title">Manhajimiz</h5>
+                        <div class="about__content--card_manhaj">
+                            <div class="about__content--card_manhaj-item">
+
+                                <i class="fa-solid fa-bullhorn"></i>
+                                <p> Barcha insonlarni тўғри йўлга chaqirish, шаръий илмларни, исломий қадриятларни insonlarga yetkazish ва баён қилиш.</p>
+                            </div>
+                            <div class="about__content--card_manhaj-item">
+                                <i class="fa-solid fa-book-quran"></i>
+                                <p>Bu yo'lda faqat Alloh va rosulini yo'lini mahkam tutish va har hil bid'at va hurofotlardan chetlashish.</p>
+                            </div>
+                            <div class="about__content--card_manhaj-item">
+                                <i class="fa-solid fa-bullhorn"></i>
+                                <p>Teachers don’t get lost in the grid view and have a dedicated Podium space.</p>
+                            </div>
+                            <div class="about__content--card_manhaj-item">
+                                <i class="fa-solid fa-users"></i>
+                                <p>Ahli-sunna val jamaoning manhajini mustahkam ushlash va har hil firqalardan uzoqlashish. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bizga bog'laning -->
+                    <div class="about__content--card">
+                        <h5 class="about__content--card_title">Bizga bog'laning</h5>
+                        <div class="about__content--card_contact">
+                            <!-- Social -->
+                            <div class="social">
+                                <h6 class="social__title">Media</h6>
+                                <a href="#" class="social__link">
+                                    <i class="fa-brands fa-telegram"></i>
+                                    <p>Telegram</p>
+                                </a>
+                                <a href="#" class="social__link">
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                    <p>Instagram</p>
+                                </a>
+                                <a href="#" class="social__link">
+                                    <i class="fa-brands fa-facebook"></i>
+                                    <p>Fecebook</p>
+                                </a>
+                                <a href="#" class="social__link">
+                                    <i class="fa-brands fa-youtube"></i>
+                                    <p>YouTube</p>
+                                </a>
+                            </div>
+                            <!-- Form -->
+                            <form action="" class="form">
+                                <h6 class="form__title">Obuna bo'ling</h6>
+                                <input type="text" name="name" id="" placeholder="Ism:*" required />
+                                <input type="email" name="email" id="" placeholder="E-Manzil:*" required />
+                            
+                                <textarea name="textarea" id="" cols="30" rows="3" placeholder="Fikr va mulohazanlaringizni yozib qoldiring..."></textarea>
+                                <div>
+
+                                    <input type="checkbox" class="form__checkbox" id="subscribeNews" name="subscribe" value="newsletter"/>
+                                    <label class="form__subscr" for="subscribeNews">Yangiliklardan menga yuboring!</label>
+                                </div>
+                                <div>
+                                    <button type="submit" class="form__btn">Jo'natish</button>
+                                </div>
+    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <footer class="footer none">
+            <div class="footer__inner">
+                <p>Copyright &#169; 2024 Oxirat hovlisi</p>
+            </div>
+        </footer>
     </div>
 
   
