@@ -1,8 +1,15 @@
-.header, .hero, .course {
+.header, .hero, .course,
+.mavzu, .about, .footer {
     display: grid;
     grid-template-columns: var(--grid-container);
 }
 
-.header__inner, .hero__inner, .course__inner {
+.header__inner, .hero__inner,
+.course__inner, .mavzu__inner,
+.about__inner, .footer__inner {
     grid-column: inner;
+}
+
+.none {
+    display: none;
 }
