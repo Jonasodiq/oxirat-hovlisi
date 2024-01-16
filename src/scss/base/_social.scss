@@ -1,0 +1,53 @@
+@use '../utilities/responsive';
+
+.social {
+    max-width: 200px;
+    gap: var(--gap-m);
+    & h6 {
+        margin: 24px;
+        // padding: 20px 0 0 20px;
+        color:black;
+        text-align: start;
+        top: 10px;
+
+        @include responsive.max(480px) {
+            margin: 16px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: var(--gap-s);
+        margin: 16px;
+
+        @include responsive.max(480px) {
+            margin: 10px;
+        }
+
+        &:hover {
+            color: rgb(0, 136, 204);
+        }
+    
+        & i {
+            font-size: 32px;
+
+            @include responsive.max(480px) {
+                font-size: 24px;
+            }
+            &.fa-square-instagram {
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    
+        & p {
+            margin: 4px 0 0 0;
+            @include responsive.max(480px) {
+                font-size: 14px;
+            }
+        }
+    }
+}
