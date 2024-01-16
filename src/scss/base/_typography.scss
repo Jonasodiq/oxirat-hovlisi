@@ -36,17 +36,14 @@ p {
     line-height: var(--line-height);
 }
 
-p {
-    line-height: var(--line-height);
-}
 
 a {
-    color: var(--color-blue);
+    color: var(--color-dark);
     text-decoration: none;
     font-weight: 700;
-    line-height: var(--line-height);
+    line-height: var(--color-accent-200);
     &:hover {
-        color: var(--color-light-200);
+        color: var(--color-accent-700);
     }
 }
 
