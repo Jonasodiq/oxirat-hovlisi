@@ -16,4 +16,6 @@ const slider = new Splide('#slider', {
 })
 slider.mount();
 
+// link: https://splidejs.com/
+
 
