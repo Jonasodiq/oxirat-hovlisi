@@ -1,17 +1,35 @@
+@use "../components/details";
 @use '../utilities/responsive';
 
 .social {
     max-width: 200px;
     gap: var(--gap-m);
-    & h6 {
-        margin: 24px;
+
+    & h5 {
+        margin: 24px 0 10px 24px;
         // padding: 20px 0 0 20px;
         color:black;
         text-align: start;
-        top: 10px;
+
+        @include details.separator($align: left);
 
         @include responsive.max(480px) {
             margin: 16px;
+        }
+        
+        @include responsive.max(440px) {
+            display: none;
+        }     
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin: 10px;
+        
+        @include responsive.max(440px) {
+            flex-direction: row;
         }
     }
 
@@ -20,8 +38,8 @@
         flex-direction: row;
         justify-content: start;
         gap: var(--gap-s);
-        margin: 16px;
-
+        margin: 4px 16px;
+        
         @include responsive.max(480px) {
             margin: 10px;
         }
@@ -31,7 +49,7 @@
         }
     
         & i {
-            font-size: 32px;
+            font-size: 28px;
 
             @include responsive.max(480px) {
                 font-size: 24px;
@@ -47,6 +65,11 @@
             margin: 4px 0 0 0;
             @include responsive.max(480px) {
                 font-size: 14px;
+            }
+
+            @include responsive.max(440px) {
+                display: none;
+                margin: 6px;
             }
         }
     }

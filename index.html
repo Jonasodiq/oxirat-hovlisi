@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oxirat hovlisi</title>
-    <link rel="stylesheet" href="style.css">
+
     <script src="src/js/menu.js" defer></script>
+    <script src="src/js/slide.js" defer></script>
     <script src="https://kit.fontawesome.com/1dbb91dc94.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/splide.min.css">
 </head>
 <body>
 
@@ -32,10 +36,10 @@
                     <!-- Menu -->
                     <nav class="menu">
                         <ul class="menu__list">
-                            <li class="menu__item"><a href="#" class="menu__link">Bosh sahifa</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Darslar</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Mavzular</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Haqimazda</a></li>
+                            <li class="menu__item"><a href="index.html" class="menu__link">Bosh sahifa</a></li>
+                            <li class="menu__item"><a href="#course" class="menu__link">Darslar</a></li>
+                            <li class="menu__item"><a href="#mavzu" class="menu__link">Mavzular</a></li>
+                            <li class="menu__item"><a href="#about" class="menu__link">Haqimazda</a></li>
                         </ul>
                     </nav>
 
@@ -57,13 +61,13 @@
             <div class="site-menu__inner">
             <ul class="site-menu__list">
                 <li class="site-menu__item">
-                <a href="#home" class="site-menu__link">Bosh sahifa</a>
+                <a href="index.html" class="site-menu__link">Bosh sahifa</a>
                 </li>
                 <li class="site-menu__item">
-                <a href="#" class="site-menu__link">Darslar</a>
+                <a href="#course" class="site-menu__link">Darslar</a>
                 </li>
                 <li class="site-menu__item">
-                <a href="#" class="site-menu__link">Mavzular</a>
+                <a href="#mavzu" class="site-menu__link">Mavzular</a>
                 </li>
                 <li class="site-menu__item">
                 <a href="#about" class="site-menu__link">Haqimazda</a>
@@ -88,62 +92,97 @@
         </section>
 
         <!-- Course -->
-        <section id="course" class="course">
+        <section id="course" class="cours">
 
-            <div class="course__inner">
-                <div class="course__content">
-                    <div class="course__cards">
-                    
-                        <div class="course__cards--card">
-                            <figure  class="course__cards--img">
-                                <img src="https://unsplash.it/800/600?image=8" alt="card">
-                            </figure>
-                            <h5>Aqida</h5>
-                            <p>Some text about the jeans. Super slim and comfy</p>
-                            <p><button class="course__cards--btn">Batafsil</button></p>
-                        </div>
-                        <div class="course__cards--card">
-                            <figure  class="course__cards--img">
-                                <img src="https://unsplash.it/800/600?image=7" alt="card">
-                            </figure>
-                            <h5>Siyrat</h5>
-                            <p>Some text about the jeans. Super slim and comfy.</p>
-                            <p><button class="course__cards--btn">Batafsil</button></p>
-                        </div>
-                        <div class="course__cards--card">
-                            <figure  class="course__cards--img">
-                                <img src="https://unsplash.it/800/600?image=20" alt="card">
-                            </figure>
-                            <h5>Odob</h5>
-                            <p>Some text about the jeans. Super slim and comfy </p>
-                            <p><button class="course__cards--btn">Batafsil</button></p>
-                        </div>
-                        <div class="course__cards--card">
-                            <figure  class="course__cards--img">
-                                <img src="https://unsplash.it/800/600?image=41" alt="card">
-                            </figure>
-                            <h5>Qur'an</h5>
-                            <p>Some text about the jeans. Super slim and comfy.</p>
-                            <p><button class="course__cards--btn">Batafsil</button></p>
-                        </div>
-                        <div class="course__cards--card">
-                            <figure  class="course__cards--img">
-                                <img src="https://unsplash.it/800/600?image=26" alt="card">
-                            </figure>
-                            <h5>Duo</h5>
-                            <p>Some text about the jeans. Super slim and comfy.</p>
-                            <p><button class="course__cards--btn">Batafsil</button></p>
-                        </div>
-  
+            <section id="slider" class="splide" aria-label="Basic Structure Example">
+                <div class="splide__track course__content">
+                  <ul class="splide__list course__cards">
+                    <div class="splide__slide course__cards--card">
+                        <figure  class="course__cards--img">
+                            <img src="https://unsplash.it/800/600?image=7" alt="card">
+                        </figure>
+                        <h5>Siyrat-1</h5>
+                        <p>Some text about the jeans. Super slim and comfy.</p>
+                        <p><button class="course__cards--btn">Batafsil</button></p>
+                    </div>
+                    <div class="splide__slide course__cards--card">
+                        <figure  class="course__cards--img">
+                            <img src="https://unsplash.it/800/600?image=20" alt="card">
+                        </figure>
+                        <h5>Odob-2</h5>
+                        <p>Some text about the jeans. Super slim and comfy </p>
+                        <p><button class="course__cards--btn">Batafsil</button></p>
+                    </div>
+                    <div class="splide__slide course__cards--card">
+                        <figure  class="course__cards--img">
+                            <img src="https://unsplash.it/800/600?image=41" alt="card">
+                        </figure>
+                        <h5>Qur'an-3</h5>
+                        <p>Some text about the jeans. Super slim and comfy.</p>
+                        <p><button class="course__cards--btn">Batafsil</button></p>
+                    </div>
+                    <div class="splide__slide course__cards--card">
+                        <figure  class="course__cards--img">
+                            <img src="https://unsplash.it/800/600?image=26" alt="card">
+                        </figure>
+                        <h5>Duo-4</h5>
+                        <p>Some text about the jeans. Super slim and comfy.</p>
+                        <p><button class="course__cards--btn">Batafsil</button></p>
+                    </div>
+                    <div class="splide__slide course__cards--card">
+                        <figure  class="course__cards--img">
+                            <img src="https://unsplash.it/800/600?image=83" alt="card">
+                        </figure>
+                        <h5>Aqida-5</h5>
+                        <p>Some text about the jeans. Super slim and comfy</p>
+                        <p><button class="course__cards--btn">Batafsil</button></p>
+                    </div>
+                    <div class="splide__slide course__cards--card">
+                        <figure  class="course__cards--img">
+                            <img src="https://unsplash.it/800/600?image=84" alt="card">
+                        </figure>
+                        <h5>Fiqh-6</h5>
+                        <p>Some text about the jeans. Super slim and comfy</p>
+                        <p><button class="course__cards--btn">Batafsil</button></p>
+                    </div>
+                    <div class="splide__slide course__cards--card">
+                        <figure  class="course__cards--img">
+                            <img src="https://unsplash.it/800/600?image=56" alt="card">
+                        </figure>
+                        <h5>Nahv-7</h5>
+                        <p>Some text about the jeans. Super slim and comfy</p>
+                        <p><button class="course__cards--btn">Batafsil</button></p>
+                    </div>
+                    <div class="splide__slide course__cards--card">
+                        <figure  class="course__cards--img">
+                            <img src="https://unsplash.it/800/600?image=89" alt="card">
+                        </figure>
+                        <h5>Sarf-8</h5>
+                        <p>Some text about the jeans. Super slim and comfy</p>
+                        <p><button class="course__cards--btn">Batafsil</button></p>
+                    </div>
+                    <div class="splide__slide course__cards--card">
+                        <figure  class="course__cards--img">
+                            <img src="https://unsplash.it/800/600?image=89" alt="card">
+                        </figure>
+                        <h5>Arab tili-9</h5>
+                        <p>Some text about the jeans. Super slim and comfy</p>
+                        <p><button class="course__cards--btn">Batafsil</button></p>
+                    </div>
+                  </ul>
+                </div>
+               
+                <div class="splide__progress">
+                    <div class="splide__progress__bar">
                     </div>
                 </div>
-
-            </div>
+            
+            </section>
 
         </section>
         
         <!-- Mavzu -->
-        <section id="mavzu" class="mavzu  none">
+        <section id="mavzu" class="mavzu">
 
             <div class="mavzu__inner">
                 <div class="mavzu__content">
@@ -214,13 +253,11 @@
   
                     </div>
                 </div>
-
             </div>
-
         </section>
 
         <!-- About -->
-        <section  id="about" class="about  none">
+        <section  id="about" class="about">
             <div class="about__inner">
                 <h3 class="about__header">Haqimizda</h3>
                 <div class="about__content">
@@ -230,7 +267,6 @@
                         <h5 class="about__content--card_title">Manhajimiz</h5>
                         <div class="about__content--card_manhaj">
                             <div class="about__content--card_manhaj-item">
-
                                 <i class="fa-solid fa-bullhorn"></i>
                                 <p> Barcha insonlarni тўғри йўлга chaqirish, шаръий илмларни, исломий қадриятларни insonlarga yetkazish ва баён қилиш.</p>
                             </div>
@@ -255,56 +291,56 @@
                         <div class="about__content--card_contact">
                             <!-- Social -->
                             <div class="social">
-                                <h6 class="social__title">Media</h6>
-                                <a href="#" class="social__link">
-                                    <i class="fa-brands fa-telegram"></i>
-                                    <p>Telegram</p>
-                                </a>
-                                <a href="#" class="social__link">
-                                    <i class="fa-brands fa-square-instagram"></i>
-                                    <p>Instagram</p>
-                                </a>
-                                <a href="#" class="social__link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                    <p>Fecebook</p>
-                                </a>
-                                <a href="#" class="social__link">
-                                    <i class="fa-brands fa-youtube"></i>
-                                    <p>YouTube</p>
-                                </a>
+                                <h5 class="social__title">Media</h5>
+                                <div class="social__content">
+                                    <a href="#" class="social__link">
+                                        <i class="fa-brands fa-telegram"></i>
+                                        <p>Telegram</p>
+                                    </a>
+                                    <a href="#" class="social__link">
+                                        <i class="fa-brands fa-square-instagram"></i>
+                                        <p>Instagram</p>
+                                    </a>
+                                    <a href="#" class="social__link">
+                                        <i class="fa-brands fa-facebook"></i>
+                                        <p>Fecebook</p>
+                                    </a>
+                                    <a href="#" class="social__link">
+                                        <i class="fa-brands fa-youtube"></i>
+                                        <p>YouTube</p>
+                                    </a>
+                                </div>
                             </div>
                             <!-- Form -->
                             <form action="" class="form">
-                                <h6 class="form__title">Obuna bo'ling</h6>
+
+                                <h5 class="form__title">Obuna bo'ling</h5>
                                 <input type="text" name="name" id="" placeholder="Ism:*" required />
                                 <input type="email" name="email" id="" placeholder="E-Manzil:*" required />
-                            
                                 <textarea name="textarea" id="" cols="30" rows="3" placeholder="Fikr va mulohazanlaringizni yozib qoldiring..."></textarea>
                                 <div>
-
                                     <input type="checkbox" class="form__checkbox" id="subscribeNews" name="subscribe" value="newsletter"/>
                                     <label class="form__subscr" for="subscribeNews">Yangiliklardan menga yuboring!</label>
                                 </div>
                                 <div>
                                     <button type="submit" class="form__btn">Jo'natish</button>
                                 </div>
-    
+
                             </form>
                         </div>
                     </div>
-                </div>
-                
+                </div>               
             </div>
         </section>
 
-        <footer class="footer none">
+        <footer class="footer">
             <div class="footer__inner">
                 <p>Copyright &#169; 2024 Oxirat hovlisi</p>
             </div>
         </footer>
     </div>
 
-  
-    
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
 </body>
 </html>

@@ -4,19 +4,14 @@
 
 .course {
     width: 100%;
-    // height: 520px;
     overflow: clip;
     
     &__content {
         width: 100%;
         height: 34rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
 
         @include responsive.max(60rem) {
-            height: 26rem;
+            height: 28rem;
         }
     }
     &__header {
@@ -58,20 +53,13 @@
             margin: 0;
             box-shadow: 10px 10px 10px rgb(0 0 0 / 0.3);
 
-            @include responsive.max(70rem) {
-                width: 250px;
-            }
-            @include responsive.max(60rem) {
-                width: 200px;
-            }
-        
             & h5 {
                 margin: 10px;
                 text-align: center;
                 color: #000;
                 @include responsive.max(60rem) {
                     margin: 6px;
-                    }
+                }
             }
 
             & p {
@@ -108,4 +96,3 @@
         }
     }
 }
-

@@ -5,13 +5,9 @@
     position: fixed;
     background: var(--color-dark-600);
     backdrop-filter: blur(4px);
-    // display: grid;
     height: 100px;
     width: 100%;
     z-index: 999;
-    // @include responsive.max(24rem) {
-    //     height: 70px;
-    // }
    
     &__inner {
         max-width: 1280px;
@@ -29,7 +25,6 @@
         @include responsive.max(40rem) {
             display: none;;
         }
-
 
         &--btn {
             width: 40px;
@@ -66,10 +61,8 @@
             border-radius: 30px;
             transition: all .5s ease-in-out;
             background-color: var(--color-dark-500);
-            // background-color: red;
             padding-right: 20px;
             color: var(--color-accent-500);
-            // color: red;
     
             &::placeholder {
                 color: var(--color-accent-500);
@@ -80,8 +73,6 @@
             }
     
             &:focus {
-                // color: red;
-                // color: var(--color-accent-500);
                 width: 200px;
                 border-radius: 0px;
                 background-color: transparent;
@@ -90,7 +81,6 @@
             }
         }
     }
-
 
     &__content {
 

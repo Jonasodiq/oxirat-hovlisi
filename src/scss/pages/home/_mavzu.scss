@@ -9,7 +9,6 @@
     
     &__content {
         width: 100%;
-        // min-height: 57rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -27,7 +26,6 @@
             @include responsive.max(815px) {
                 margin: 10px;
             }
-
         }
     }
     

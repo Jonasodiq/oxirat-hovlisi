@@ -58,4 +58,5 @@
 
     --page-width: 72rem;
     --grid-container: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(32px, 1fr) [full-end];
+    --grid-container-hero: [full-start] minmax(2px, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(2px, 1fr) [full-end];
 }
